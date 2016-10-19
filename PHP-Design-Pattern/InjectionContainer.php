@@ -1,7 +1,5 @@
 <?php
 
-namespace App\dependencyInjectionContainer;
-
 class InjectionContainer {
 
     /**
