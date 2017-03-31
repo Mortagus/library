@@ -51,4 +51,18 @@ class StringHelper
         $t = round($seconds);
         return sprintf('%02d H %02d m. %02d s.', ($t / 3600), ($t / 60 % 60), $t % 60);
     }
+
+    /**
+     * This function can be called from several places.
+     * This function modify a string from this 'url_parameter' to this 'urlParameter'
+     *
+     * @param $string
+     *
+     * @return string
+     */
+    public static function toLowerCamelCase($string)
+    {
+        $newKey = lcfirst(str_replace(' ', '', ucwords(str_replace('_', ' ', $string))));
+        return $newKey;
+    }
 }
